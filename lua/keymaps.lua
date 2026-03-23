@@ -74,4 +74,6 @@ vim.keymap.set('n', '<leader>mr', '<cmd>w<cr><cmd>Recompile<cr>', { desc = 'Reco
 vim.keymap.set('n', '<leader>mdc', '<cmd>DiffviewClose<cr>', { desc = 'Close' })
 vim.keymap.set('n', '<leader>mdo', '<cmd>DiffviewOpen<cr>', { desc = 'Open' })
 
+vim.keymap.set('n', '<leader>mt', '<cmd>edit term://zsh<cr>', { desc = 'Terminal' })
+
 -- vim: ts=2 sts=2 sw=2 et
