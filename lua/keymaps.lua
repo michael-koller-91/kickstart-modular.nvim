@@ -54,8 +54,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- vim: ts=2 sts=2 sw=2 et
-
 ---------------------------------------------------------------------------
 -- My Keymaps
 ---------------------------------------------------------------------------
@@ -75,3 +73,5 @@ vim.keymap.set('n', '<leader>mr', '<cmd>w<cr><cmd>Recompile<cr>', { desc = 'Reco
 -- plugin Diffview
 vim.keymap.set('n', '<leader>mdc', '<cmd>DiffviewClose<cr>', { desc = 'Close' })
 vim.keymap.set('n', '<leader>mdo', '<cmd>DiffviewOpen<cr>', { desc = 'Open' })
+
+-- vim: ts=2 sts=2 sw=2 et
