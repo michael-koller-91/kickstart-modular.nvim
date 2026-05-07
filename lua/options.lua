@@ -76,6 +76,9 @@ vim.o.confirm = true
 ---------------------------------------------------------------------------
 -- My Options
 ---------------------------------------------------------------------------
-
---  See `:help hlsearch`
+---
+-- When there is a previous search pattern, highlight all its matches.
 vim.opt.hlsearch = true
+
+-- Write the contents of the file, if it has been modified, on each `:make`.
+vim.opt.autowrite = true
