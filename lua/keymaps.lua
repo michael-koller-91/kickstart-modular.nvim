@@ -68,7 +68,14 @@ vim.keymap.set('n', '-', '<cmd>Oil<cr>', { desc = 'Open parent directory (Oil)' 
 vim.keymap.set('n', 'git', '<cmd>Neogit<cr>', { desc = 'Neo[GIT]' })
 
 -- plugin recompile
-vim.keymap.set('n', '<leader>mr', '<cmd>w<cr><cmd>Recompile<cr>', { desc = 'Recompile' })
+vim.keymap.set('n', '<leader>mc', function()
+  local arg = vim.fn.input ':Compile '
+  if arg == nil then
+    return
+  end
+  vim.cmd('Compile ' .. (arg == '' and '' or vim.fn.escape(arg, '"\\')))
+end, { desc = '[C]ompile' })
+vim.keymap.set('n', '<leader>mr', '<cmd>Recompile<cr>', { desc = '[R]ecompile' })
 
 -- plugin Diffview
 vim.keymap.set('n', '<leader>mdc', '<cmd>DiffviewClose<cr>', { desc = 'Close' })
